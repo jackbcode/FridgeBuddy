@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" src="~/favicon.ico" type="image/x-icon" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    
+    <title>@ViewBag.Title - Fridge Buddy</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container heading-container" style="display:flex; justify-content:center; align-items:center;">
+
+        <div><img class="mainImage" src="~/Images/fridgePic.png"/> </div>
+        <div class="row">
+            <div class="heading">Fridge Buddy </div>
+            <div class="subHeading">Quick, Easy, Waste Free</div>
+        </div>
+    </div>
+    <div class="container body-content mainheader">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footerText">
+                <p id="app">&copy; @DateTime.Now.Year - A Jack Bradley Application</p>
+                <p id="thanks">Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

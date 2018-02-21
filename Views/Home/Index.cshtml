@@ -1,0 +1,182 @@
+﻿@model IEnumerable<FridgeBuddy.Models.Fridge>
+
+@{
+    ViewBag.Title = "";
+}
+
+
+<div class ="ecMe" style="display:flex; justify-content:center; align-items:center;">
+    <div class="eatMe">
+        <h2>Eat Me Today</h2>
+       
+
+            @*for each loop to display items that will expire Today *@
+        
+        <p>
+            @foreach (var item in Model)
+            {
+                if (item.ExpiryDate == DateTime.Today)
+                {
+                   @Html.DisplayFor(modelItem => item.Item) <br />
+                }
+
+
+            }
+        </p>
+    </div>
+
+    <div class="chuckMe">
+        <h2>Chuck Me Out</h2>
+       
+
+            @*for each loop to display items that will expire Today *@
+         
+        <p>
+            @foreach (var item in Model)
+            {
+                if (item.ExpiryDate == DateTime.Today.AddDays(-1))
+                {
+                    @Html.DisplayFor(modelItem => item.Item)<br />
+                }
+                else if (item.ExpiryDate == DateTime.Today.AddDays(-2))
+                {
+                    @Html.DisplayFor(modelItem => item.Item)<br />
+                }
+                else if (item.ExpiryDate == DateTime.Today.AddDays(-3))
+                {
+                    @Html.DisplayFor(modelItem => item.Item)<br />
+                }
+                else if (item.ExpiryDate == DateTime.Today.AddDays(-4))
+                {
+                    @Html.DisplayFor(modelItem => item.Item)<br />
+                }
+                else if (item.ExpiryDate == DateTime.Today.AddDays(-5))
+                {
+                    @Html.DisplayFor(modelItem => item.Item)<br />
+                }
+                
+            }
+        </p>
+    </div>
+</div>
+
+<div class="itemActions" style="display:flex; justify-content:center; align-items:center;">
+    <div class="newItem">
+        
+        
+        <p>
+            @Html.ActionLink("Add New Food Item", "Create", null, new { @class = "button" })
+        </p>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="searchFood">
+            <p>
+                Food Category: @Html.DropDownList("foodCategory", "All")
+                Food Item: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" id="searchBox" />
+            </p>
+        </div>
+    }
+</div>
+<div class="colourChart" style="display:flex; justify-content:center; align-items:center;">
+    <div class="colours" style="display:flex; justify-content:center; align-items:center;">
+        <div>Fresh</div>
+        <div class="green"></div>
+    </div>
+    <div class="colours" style="display:flex; justify-content:center; align-items:center;">
+        <div> 2 days left </div>
+        <div class="yellow"></div>
+    </div>
+    <div class="colours" style="display:flex; justify-content:center; align-items:center;">
+        <div> 1 day left</div>
+        <div class="orange"></div>
+    </div>
+    <div class="colours" style="display:flex; justify-content:center; align-items:center;">
+        <div> Eat !</div>
+        <div class="red"></div>
+    </div>
+    <div class="colours" style="display:flex; justify-content:center; align-items:center;">
+        <div> Expired</div>
+        <div class="purple"></div>
+    </div>
+
+
+
+
+</div>
+
+
+<table class="table" id="foodTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DaysTillExpiry)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    //conditional operator to produce row colour depending on expiry date
+    int daysLeft = (item.ExpiryDate - DateTime.Today).Days;
+    string style = daysLeft <= -1 ? "background-color:#C39BD3" : daysLeft <= 0 ? "background-color:#F1948A" : daysLeft <= 1 ? "background-color:#F8C471" : daysLeft <= 2 ? "background-color:#F7DC6F" : daysLeft >= 2 ? "background-color:#82E0AA" : null;
+
+
+
+<tr style="@style">
+
+        <td>
+           <img src="@Url.Content(item.Picture)" />
+         
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+       
+            @Html.DisplayFor(modelItem => daysLeft)
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) 
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+  
+
+
+</table>

@@ -1,0 +1,393 @@
+﻿body {
+    background-color: whitesmoke;
+    font-size: 20px;
+    color: #34495E;
+    font-family: 'Righteous', cursive;
+    border-color:#00ACD8      ;
+    border-style: double;
+    border-width: 20px;
+    border-radius: 10px;
+    margin-right:150px; 
+    margin-left:150px;
+} 
+
+.heading-container {
+    margin-bottom: 10px;
+    /*border-color:#00ACD8      ;
+    border-style:solid;
+    border-width:3px;
+    border-radius:5px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.heading {
+    font-size: 50px;
+    color:#00ACD8;
+    font-family: 'Bungee Inline', cursive;
+    padding-left: 10px;
+    height: 60px;
+    line-height:70px;
+    text-align: right;
+}
+
+.mainImage{
+
+    height:100px;
+    width:100px;
+    border-radius:0px !important;
+}
+.subHeading {
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+    color: #F4D03F  ;
+   text-align:center;
+    
+}
+
+.eatMe, .chuckMe {
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+    color: #34495E;
+    border-color:#00ACD8      ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    padding: 0px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width:310px;
+    text-align:center;
+}
+
+    .eatMe p {
+        font-size: 18px;
+        color: #F4D03F  ;
+    }
+
+    .chuckMe p {
+        font-size: 18px;
+        color: #C70039;
+    }
+
+    .chuckMe h2 {
+        color:#00ACD8      ;
+        font-family: 'Righteous', cursive;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .eatMe h2 {
+        color:#00ACD8      ;
+        font-family: 'Righteous', cursive;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .ecMe{
+        padding-bottom:40px;
+    }
+
+
+.itemActions {
+    border-color:#00ACD8      ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #F4D03F  ;
+    background-color:#00ACD8      ;
+}
+
+
+.button {
+    outline: 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 40px;
+    border-color: #F4D03F  ;
+    background-color: #F4D03F  ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:#00ACD8      ;
+}
+    .button:hover {
+        border-color: white;
+        background-color: #F4D03F  ;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 5px;
+        color:white;
+    }
+
+.newItem a {
+    color:#00ACD8      ;
+}
+
+   .newItem a:hover {
+        color:white;
+    }
+
+input, select{
+    outline: 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 40px;
+    border-color: #F4D03F  ;
+    background-color: #F4D03F  ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:#00ACD8      ;
+    font-size:20px;
+}
+
+#searchBox:hover {
+    color: white;
+    border-color:white;
+}
+
+
+
+.green{
+    width: 70px;
+    background-color: #82E0AA;
+    padding:15px;
+    border-radius:5px;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+
+.yellow {
+    width: 70px;
+    background-color: #F7DC6F;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.orange {
+    width: 70px;
+    background-color: #F8C471;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.red {
+    width: 70px;
+    background-color: #F1948A;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.purple {
+    width: 70px;
+    background-color: #C39BD3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.colours{
+    margin-left:20px;
+    margin-right:20px;
+
+}
+
+.colourChart {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color:#00ACD8      ;
+    font-weight:bold;
+}
+
+
+
+th {
+    background-color:#00ACD8      ;
+    color: #F4D03F  ;
+   
+   
+}
+
+img {
+    height:100px;
+    width:100px;
+    border-radius:50%;
+}
+
+td a {
+    outline: 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 2px;
+    border-color: #F4D03F  ;
+    background-color: #F4D03F  ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:#00ACD8      ;
+    font-size:16px;
+}
+
+td a:hover {
+    color: white;
+    border-color: white;
+}
+
+td {
+    color: #239B56;
+}
+
+
+
+
+
+.form-horizontal label {
+    color:#00ACD8      ;
+}
+
+.sideTitle {
+    border-color: #F4D03F  ;
+    background-color: #F4D03F  ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:#00ACD8      ;
+    font-family: 'Righteous', cursive;
+}
+
+.foodTitle {
+    color:#00ACD8      ;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #F4D03F  ;
+    padding:8px;
+    width:30%;
+}
+
+.foodTitleItem {
+    color:#00ACD8      ;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #F4D03F  ;
+    padding: 30px;
+    width: 100%;
+}
+
+.foodTitleItemDiv{
+
+    margin-right:30px;
+}
+
+btn btn-default {
+    outline: 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 2px;
+    border-color: #F4D03F  ;
+    background-color: #F4D03F  ;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:#00ACD8      ;
+    font-size: 16px;
+}
+btn btn-default:hover{
+    color: white;
+    border-color: white;
+}
+
+expDay{
+    width:20% !important;
+    padding-left:30px !important;
+}
+
+dt {
+    color:#00ACD8      ;
+    padding-bottom:20px;
+    padding-top:10px;
+}
+
+dd {
+    outline: 0;
+    padding: 10px;
+    margin-right: 40px;
+    /*border-color: #F4D03F  ;*/
+    background-color: #F4D03F  ;
+    /*border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;*/
+    color: #00ACD8;
+    font-size: 18px;
+}
+
+#expDay {
+    color: #F4D03F  ;
+    background-color:#00ACD8      ;
+    margin-left:16px;
+    border-radius:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+}
+
+.deleteHeading {
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+    color: #00ACD8;
+    text-align: center;
+}
+    footer p {
+    font-size: 10px !important;
+}
+
+@media only screen and (max-width: 780px) {
+
+    body {
+        margin-right: 5px;
+        margin-left: 5px;
+        width:850px;
+        border:none;
+        padding-left:1px;
+    }
+
+
+    .colours{
+        padding-left:5px;
+        padding-right:5px;
+        margin:0px;
+    }
+
+
+
+}

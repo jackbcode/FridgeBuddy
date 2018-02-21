@@ -1,0 +1,96 @@
+﻿@model FridgeBuddy.Models.Fridge
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+@{
+   
+    int daysLeft = ((Model.ExpiryDate - DateTime.Today).Days);
+    string style = daysLeft <= -1 ? "background-color:#C39BD3" : daysLeft <= 0 ? "background-color:#F1948A" : daysLeft <= 1 ? "background-color:#F8C471" : daysLeft <= 2 ? "background-color:#F7DC6F" : daysLeft >= 2 ? "background-color:#82E0AA" : null;
+}
+
+<div>
+    <h2 class="sideTitle">Food Item</h2>
+</div>
+
+  <div  style="display:flex; justify-content:center; align-items:flex-start;">
+      <div class="foodTitleItemDiv">
+          <p class="foodTitleItem">@Html.DisplayFor(model => model.Item)</p>
+      </div>
+      <div class=" = " col-md-2">
+          <img src="@Url.Content(Model.Picture)" alt="Food Item " />
+      </div>
+   
+    </div>
+
+        
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Item)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Item)
+            </dd>*@
+
+
+<div style="display:flex; justify-content:center; align-items:center;flex-direction:column;">
+        <div class="col-md-10"  >
+
+
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Category)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Location)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Location)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ExpiryDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ExpiryDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DaysTillExpiry)
+                </dt>
+
+                <dd style="@style">
+                     @Html.DisplayFor(model => (model.ExpiryDate - DateTime.Today).Days)
+
+                   
+
+                             
+                </dd>
+            </dl>
+        </div>
+
+<div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "button" })
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "button" })
+    </p>
+</div>
+  </div>
